@@ -226,15 +226,7 @@ button:hover:after {
     transform: scale(1);
 }
 
- {
-    animation-name: ani-rotate;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-}
+
 
 @keyframes ani-rotate {
     0% {
