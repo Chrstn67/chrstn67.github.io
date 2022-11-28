@@ -10,11 +10,16 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: lavender;
+    border-radius: 5%;
+    border: 0.5px solid black;
+    margin: 5px;
+    padding: 15px;
 }
 
-h1 {
+header h1 {
     font-style: italic;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     white-space: pre-wrap;
     -webkit-animation: alert 10s ease-in-out 0s infinite normal;
@@ -117,6 +122,11 @@ h1 {
     }
 }
 
+header nav {
+    display: flex;
+    align-items: center;
+}
+
 button {
     width: 130px;
     height: 40px;
@@ -124,6 +134,7 @@ button {
     background-color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 10px 25px;
+    margin: 10px;
     font-family: "Lato", sans-serif;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -165,26 +176,27 @@ button {
     }
     80% {
         background-color: rgb(220, 230, 240);
+        color:red
     }
     90% {
         background-color: rgb(250, 0, 10);
+        
     }
     100% {
+        color: white;
     }
 }
 
 button:hover {
+    color: black;
+    border: 1px solid black;
+    background: transparent;
     animation: none;
-    background: rgb(22, 9, 240);
-    background: linear-gradient(
-        0deg,
-        rgba(22, 9, 240, 1) 0%,
-        rgba(49, 110, 244, 1) 100%
-    );
-    color: #fff;
-    border: none;
     transition: all 0.3s ease;
     overflow: hidden;
+    -webkit-box-shadow: 0px 0px 50px 30px rgb(255, 255, 255);
+    -moz-box-shadow: 0px 0px 50px 30px #ffffff;
+    box-shadow: 0px 0px 50px 30px #ffffff;
 }
 button:after {
     position: absolute;
@@ -198,11 +210,11 @@ button:after {
     -webkit-transform: scale(0.1);
     transform: scale(0.1);
 }
-button:hover {
+/* button:hover {
     color: #fff;
     border: none;
     background: transparent;
-}
+} */
 button:hover:after {
     background: rgb(0, 3, 255);
     background: linear-gradient(
@@ -212,4 +224,23 @@ button:hover:after {
     );
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+ {
+    animation-name: ani-rotate;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes ani-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
