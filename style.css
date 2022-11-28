@@ -8,8 +8,10 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-content: stretch;
     background-color: lavender;
     border-radius: 5%;
     border: 0.5px solid black;
@@ -17,7 +19,7 @@ header {
     padding: 15px;
 }
 
-header h1 {
+header h1 div{
     font-style: italic;
     font-size: 40px;
     text-align: center;
@@ -26,6 +28,11 @@ header h1 {
     -moz-animation: alert 10s ease-in-out 0s infinite normal;
     -ms-animation: alert 10s ease-in-out 0s infinite normal;
     animation: alert 10s ease-in-out 0s infinite normal;
+}
+header nav ul #buttons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @-webkit-keyframes alert {
@@ -176,11 +183,10 @@ button {
     }
     80% {
         background-color: rgb(220, 230, 240);
-        color:red
+        color: red;
     }
     90% {
         background-color: rgb(250, 0, 10);
-        
     }
     100% {
         color: white;
@@ -225,8 +231,6 @@ button:hover:after {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
-
-
 
 @keyframes ani-rotate {
     0% {
